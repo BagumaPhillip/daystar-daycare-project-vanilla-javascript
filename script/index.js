@@ -17,7 +17,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         window.location.href = '../pages/dashboard.html';
     } else if (username === sitterCredentials.username && password === sitterCredentials.password) {
         // Redirect to sitter page (assuming sitter.html exists)
-        window.location.href = 'sitter.html';
+        window.location.href = '../pages/sitter-babyassignment.html';
     } else {
         // Display an error message for invalid credentials
         alert('Invalid username or password');

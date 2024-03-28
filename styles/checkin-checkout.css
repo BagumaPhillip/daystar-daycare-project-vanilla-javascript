@@ -88,3 +88,16 @@ footer {
 #departureDetails p {
     margin-bottom: 10px;
 }
+
+.div button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.div button:hover {
+    background-color: #45a049;
+}
