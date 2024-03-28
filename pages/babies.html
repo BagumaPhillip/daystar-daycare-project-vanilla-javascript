@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DayStar Daycare - Manage Babies</title>
+    <link rel="stylesheet" href="../styles/babies.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <h1>DayStar Daycare</h1>
+        <nav>
+            <ul>
+                <li><a href="babies.html">Babies</a></li>
+                <li><a href="sitters.html">Sitters</a></li>
+                <li><a href="payments.html">Payments</a></li>
+                <li><a href="procurement.html">Procurement</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="checkin-checkout.html">Checkin-Checkout</a></li>
+                <li id="sign-out"><a href="../index.html">Sign Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Manage Babies</h2>
+        <form id="babyForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <div>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div>
+                <label for="age">Age (in months):</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+            <label for="parent1">Parent 1 Name:</label>
+            <input type="text" id="parent1" name="parent1" required>
+            <label for="parent2">Parent 2 Name:</label>
+            <input type="text" id="parent2" name="parent2">
+            <label for="babyId">Baby ID Number:</label>
+            <input type="text" id="babyId" name="babyId">
+            <button type="submit">Add Baby</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Footer content -->
+    </footer>
+</body>
+</html>

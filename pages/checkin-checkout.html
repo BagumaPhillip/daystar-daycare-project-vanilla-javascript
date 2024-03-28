@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DayStar Daycare - Manage Babies</title>
+    <link rel="stylesheet" href="../styles/checkin-checkout.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <h1>DayStar Daycare</h1>
+        <nav>
+            <ul>
+                <li><a href="babies.html">Babies</a></li>
+                <li><a href="sitters.html">Sitters</a></li>
+                <li><a href="payments.html">Payments</a></li>
+                <li><a href="procurement.html">Procurement</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="checkin-checkout.html">Checkin-Checkout</a></li>
+                <li id="sign-out"><a href="../index.html">Sign Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Arrivals Form -->
+        <h2>Arrivals</h2>
+        <form id="arrivalForm" class="form">
+            <label for="babyName">Baby Name:</label>
+            <input type="text" id="babyName" name="babyName" required>
+            <label for="arrivalTime">Time of Arrival:</label>
+            <input type="time" id="arrivalTime" name="arrivalTime" required>
+            <label for="periodOfStay">Period of Stay:</label>
+            <select id="periodOfStay" name="periodOfStay" required>
+                <option value="halfDay">Half Day</option>
+                <option value="fullDay">Full Day</option>
+            </select>
+            <label for="personBringing">Person Bringing the Baby:</label>
+            <input type="text" id="personBringing" name="personBringing" required>
+            <label for="amountPaid">Amount Paid (UGX):</label>
+            <input type="number" id="amountPaid" name="amountPaid" required>
+            <button type="submit">Submit Arrival</button>
+        </form>
+
+        <!-- Departures Form -->
+        <h2>Departures</h2>
+        <form id="departureForm" class="form">
+            <label for="babyNameDeparture">Baby Name:</label>
+            <input type="text" id="babyNameDeparture" name="babyNameDeparture" required>
+            <label for="departureTime">Time of Departure:</label>
+            <input type="time" id="departureTime" name="departureTime" required>
+            <label for="personTaking">Person Taking the Baby:</label>
+            <input type="text" id="personTaking" name="personTaking" required>
+            <label for="comment">Comment(Optional):</label>
+            <textarea id="comment" name="comment"></textarea>
+            <button type="submit">Submit Departure</button>
+        </form>
+
+        <h2>Departure Payment Details</h2>
+        <div id="departureDetails">
+            <p><strong>Period of Stay:</strong> <span id="periodOfStay"></span></p>
+            <p><strong>Amount Paid (UGX):</strong> <span id="amountPaidDisplay"></span></p>
+            <p><strong>Balance Remaining:</strong> <span id="balanceRemaining"></span></p>
+        </div>
+    </main>
+S
+    <!-- Footer -->
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../script/checkin-checkout.js"></script>
+</body>
+</html>
