@@ -41,16 +41,29 @@ function showSection(section) {
     switch (section) {
         case 'babies':
             content.innerHTML = `<h2>Babies Section</h2>
+                                <h3>Arrivals</h3>
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th>Baby Number</th>
-                                            <th>Name</th>
-                                            <th>Gender</th>
-                                            <th>Parent/Guardian Name</th>
+                                            <th>Baby name</th>
                                             <th>Time of Arrival</th>
+                                            <th>Period of Stay</th>
+                                            <th>Person bringing the Baby</th> 
+                                            <th>Amount Paid (UGX)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="arrivalsTableBody">
+                                        <!-- Data will be populated dynamically -->
+                                    </tbody>
+                                </table>
+                                <h3>Departures</h3>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Baby Name</th>
                                             <th>Time of Departure</th>
-                                            <th>Person Who Picked Baby</th>
+                                            <th>Person taking the Baby</th>
+                                            <th>Comment</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -73,75 +86,60 @@ function showSection(section) {
                                     <tbody id="sitterTableBody">
                                         <!-- Data will be populated dynamically -->
                                     </tbody>
-                                </table>
-                                <h3>Sitter Assignment Table</h3>
+                                </table>`;
+            populateSitterTable(); // Populate sitter table
+            break;
+        case 'assign-accounts':
+            content.innerHTML = `<h2>Assign Accounts Section</h2>
+                                <h3>Create Accounts</h3>
+                                <form id="createAccountForm">
+                                    <label for="accountName">Name:</label>
+                                    <input type="text" id="accountName" name="accountName" required>
+                                    <label for="accountPassword">Password:</label>
+                                    <input type="password" id="accountPassword" name="accountPassword" required>
+                                    <button type="submit">Create Account</button>
+                                </form>
+                                <h3>Accounts Table</h3>
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th>Sitter Name</th>
-                                            <th>Assigned Babies</th>
-                                            <th>Period of Stay</th>
+                                            <th>Name</th>
+                                            <th>Password</th>
                                         </tr>
-                                        </thead>
-                                        <tbody>
-                                            <!-- Data will be populated dynamically -->
-                                        </tbody>
-                                    </table>`;
-                populateSitterTable(); // Populate sitter table
-                break;
-            case 'assign-accounts':
-                content.innerHTML = `<h2>Assign Accounts Section</h2>
-                                    <h3>Create Accounts</h3>
-                                    <form id="createAccountForm">
-                                        <label for="accountName">Name:</label>
-                                        <input type="text" id="accountName" name="accountName" required>
-                                        <label for="accountPassword">Password:</label>
-                                        <input type="password" id="accountPassword" name="accountPassword" required>
-                                        <button type="submit">Create Account</button>
-                                    </form>
-                                    <h3>Accounts Table</h3>
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Password</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="accountsTableBody">
-                                            <!-- Accounts will be populated dynamically -->
-                                        </tbody>
-                                    </table>`;
-                populateAccountsTable(); // Populate accounts table
-                break;
-        }
+                                    </thead>
+                                    <tbody id="accountsTableBody">
+                                        <!-- Accounts will be populated dynamically -->
+                                    </tbody>
+                                </table>`;
+            populateAccountsTable(); // Populate accounts table
+            break;
     }
-    
-    // Handle form submission for creating accounts
-    const createAccountForm = document.getElementById('createAccountForm');
-    createAccountForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
-    
-        // Get form data
-        const formData = new FormData(createAccountForm);
-        const accountData = {};
-        formData.forEach((value, key) => {
-            accountData[key] = value;
-        });
-    
-        // Save data to localStorage
-        let accounts = JSON.parse(localStorage.getItem('accounts')) || [];
-        accounts.push(accountData);
-        localStorage.setItem('accounts', JSON.stringify(accounts));
-    
-        // Update accounts table
-        populateAccountsTable();
-    
-        // Clear form
-        createAccountForm.reset();
+}
+
+// Handle form submission for creating accounts
+const createAccountForm = document.getElementById('createAccountForm');
+createAccountForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form data
+    const formData = new FormData(createAccountForm);
+    const accountData = {};
+    formData.forEach((value, key) => {
+        accountData[key] = value;
     });
-    
-    // Initial population of sitter table and accounts table
-    populateSitterTable();
+
+    // Save data to localStorage
+    let accounts = JSON.parse(localStorage.getItem('accounts')) || [];
+    accounts.push(accountData);
+    localStorage.setItem('accounts', JSON.stringify(accounts));
+
+    // Update accounts table
     populateAccountsTable();
 
-    
+    // Clear form
+    createAccountForm.reset();
+});
+
+// Initial population of sitter table and accounts table
+populateSitterTable();
+populateAccountsTable();

@@ -29,7 +29,7 @@
 
     <!-- Main Content -->
     <main>
-        <h2>Manage Babies</h2>
+        <h2>Register Baby</h2>
         <form id="babyForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -54,6 +54,30 @@
             <input type="text" id="babyId" name="babyId" required>
             <button type="submit">Add Baby</button>
         </form>
+
+        <!-- Space between the form and the table -->
+        <div style="margin-top: 20px;"></div>
+
+        <!-- Table to display the submitted data -->
+       <div>
+        <h2>All registered babies</h2>
+        <table id="babyTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Age (months)</th>
+                    <th>Location</th>
+                    <th>Parent 1 Name</th>
+                    <th>Parent 2 Name</th>
+                    <th>Baby ID Number</th>
+                </tr>
+            </thead>
+            <tbody id="babyTableBody">
+                <!-- Rows will be populated dynamically -->
+            </tbody>
+        </table>
+    </div>
     </main>
 
     <!-- Footer -->

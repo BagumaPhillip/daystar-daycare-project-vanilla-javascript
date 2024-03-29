@@ -28,9 +28,54 @@ main {
 }
 
 footer {
-    background-color: #f0f0f0;
+    background-color: #f5f1f1;
     padding: 20px;
     text-align: center;
 }
 
 /* Add more custom styles as needed */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+}
+
+th {
+    background-color: #4a85a0;
+}
+
+tr:hover {
+    background-color: #a8a4a4;
+}
+
+tfoot {
+    font-weight: bold;
+}
+
+#totalCost {
+    color: #ff6347;
+}
+
