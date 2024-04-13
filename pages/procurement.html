@@ -1,65 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/procurement.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
-    <link rel="manifest" href="../favicon/site.webmanifest">
-</head>
-<body>
+    <link rel="stylesheet" href="../styles/procurement.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+  </head>
+  <body>
     <header>
-        <h1>DayStar Daycare</h1>
-        <nav>
-            <ul>
-                <li><a href="babies.html">Babies</a></li>
-                <li><a href="sitters.html">Sitters</a></li>
-                <li><a href="payments.html">Payments</a></li>
-                <li><a href="procurement.html">Procurement</a></li>
-                <li><a href="checkin-checkout.html">Checkin-Checkout</a></li> 
-                <li><a href="dashboard.html">Dashboard</a></li> 
-                <li id="sign-out"><a href="../index.html">Sign Out</a></li>
-            </ul>
-        </nav>
+      <h1>DayStar Daycare</h1>
+      <nav>
+        <ul>
+          <li><a href="babies.html">Babies</a></li>
+          <li><a href="sitters.html">Sitters</a></li>
+          <li><a href="payments.html">Payments</a></li>
+          <li><a href="procurement.html">Procurement</a></li>
+          <li><a href="checkin-checkout.html">Checkin-Checkout</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li id="sign-out"><a href="../index.html">Sign Out</a></li>
+        </ul>
+      </nav>
     </header>
+    <main>
+      <h1>Procurement Table</h1>
 
-    <h1>Procurement Table</h1>
-
-    <table id="procurementTable">
+      <table id="procurementTable">
         <thead>
-            <tr>
-                <th style="width: 40%;">Item</th>
-                <th style="width: 20%;">Quantity</th>
-                <th style="width: 20%;">Unit Price ($)</th>
-                <th style="width: 20%;">Cost ($)</th>
-            </tr>
+          <tr>
+            <th style="width: 40%">Item</th>
+            <th style="width: 20%">Quantity</th>
+            <th style="width: 20%">Unit Price ($)</th>
+            <th style="width: 20%">Cost ($)</th>
+          </tr>
         </thead>
         <tbody>
-            <tr>
-                <td contenteditable="true">Item 1</td>
-                <td contenteditable="true">1</td>
-                <td contenteditable="true">10</td>
-                <td></td>
-            </tr>
-            <!-- Add more rows as needed -->
+          <tr>
+            <td contenteditable="true">Item 1</td>
+            <td contenteditable="true">1</td>
+            <td contenteditable="true">10</td>
+            <td></td>
+          </tr>
+          <!-- Add more rows as needed -->
         </tbody>
         <tfoot>
-            <tr>
-                <td colspan="4">
-                    <button id="addRow">+</button>
-                    <button id="deleteRow">-</button>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3" style="text-align: right;">Total Cost:</td>
-                <td id="totalCost">0</td>
-            </tr>
+          <tr>
+            <td colspan="4">
+              <button id="addRow">+</button>
+              <button id="deleteRow">-</button>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="text-align: right">Total Cost:</td>
+            <td id="totalCost">0</td>
+          </tr>
         </tfoot>
-    </table>
-
-<script src="../script/procurement.js"></script>
-</body>
+      </table>
+    </main>
+    <script src="../script/procurement.js"></script>
+  </body>
 </html>
