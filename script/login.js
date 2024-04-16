@@ -14,10 +14,10 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // Check if the entered credentials match either admin or sitter
     if (username === adminCredentials.username && password === adminCredentials.password) {
         // Redirect to admin page (assuming admin.html exists)
-        window.location.href = '../pages/dashboard.html';
+        window.location.href = './dashboard.html';
     } else if (username === sitterCredentials.username && password === sitterCredentials.password) {
         // Redirect to sitter page (assuming sitter.html exists)
-        window.location.href = '../pages/sitter-babyassignment.html';
+        window.location.href = './sitter-babyassignment.html';
     } else {
         // Display an error message for invalid credentials
         alert('Invalid username or password');
